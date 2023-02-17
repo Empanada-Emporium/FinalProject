@@ -1,5 +1,4 @@
-body{
-    background-image: linear-gradient(red, green);
-    background-repeat: no-repeat;
-  }
-  
+body {
+  background:linear-gradient(to left top, yellow, red);
+  background-attachment: fixed; 
+}
