@@ -3,10 +3,19 @@
 <head>
 	<title>Empanada Emporium</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		let shoppingCart = [];
+
+		function addItemToCart(item) {
+			shoppingCart.push(item);
+			console.log(`Added ${item} to shopping cart.`);
+			console.log(shoppingCart);
+		}
+	</script>
 </head>
 <body>
 	<header>
-		<center><h1>Empanada Emporium<img src="images/logo.png" alt="logo" /></h1></center>
+		<center><h1>Our Menu<img src="images/logo.png" alt="logo" /></h1></center>
 	</header>
 	<nav>
 		<ul>
@@ -18,12 +27,27 @@
     <main>
 		<section>
 			<h2>Our Menu</h2>
-			<ul>
-				<li>Beef Empanada - $2.50</li>
-				<li>Chicken Empanada - $2.50</li>
-				<li>Pork Empanada - $2.50</li>
-				<li>Spinach and Cheese Empanada - $2.50</li>
-				<li>Vegetable Empanada - $2.50</li>
+			<ul class="boxed-list">
+				<li class="boxed-item">Beef Empanada - $1.94
+				<dl>Filled with our delicious seasoned beef, in a sauce made with tomatos, onions, and garlic.</dl>
+				<button onclick="addItemToCart('Beef Empanada')">Add to Cart</button></li>
+				
+				<li class="boxed-item">Chicken Empanada - $1.94
+				<dl>Filled with mouth watering shredded chicken, in a sauce made with tomatos, onions, and garlic.</dl>
+				<button onclick="addItemToCart('Chicken Empanada')">Add to Cart</button></li>
+				
+				<li class="boxed-item">Pork Empanada - $2.36
+				<dl>Filled with our juicy pulled pork, in a sauce made with tomatos, onions, and garlic.</dl>
+				<button onclick="addItemToCart('Pork Empanada')">Add to Cart</button></li>
+							
+				<li class="boxed-item">Spinach and Cheese Empanada - $1.86
+				<dl>Pastry filled with fresh spinach, and gooey Queso asadero.</dl>
+				<button onclick="addItemToCart('Spinach and Cheese Empanada')">Add to Cart</button></li>
+				
+				<li class="boxed-item">Vegetable Empanada - $1.65
+				<dl>Our vegetable medley! Filled with black beans, veggies, corn and our secret blend of spices.</dl>
+				<button onclick="addItemToCart('Vegetable Empanada')">Add to Cart</button></li>
 			</ul>
 		</section>
+		<center><h4>Taxes included</h4></center>
 	</main>
