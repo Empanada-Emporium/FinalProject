@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			padding: 20px;
+      text-align: center;
+		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Your Shopping Cart</h1>
+	<p>Here are the items in your shopping cart:</p>
+	<ul id="shoppingCartList"></ul>
+	
+	<script>
+		let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
+		
+		function displayShoppingCart() {
+			let cartList = document.getElementById("shoppingCartList");
+			if (shoppingCart && shoppingCart.length > 0) {
+				for (let i = 0; i < shoppingCart.length; i++) {
+					let item = shoppingCart[i];
+					let listItem = document.createElement("li");
+					listItem.textContent = item;
+					cartList.appendChild(listItem);
+				}
+			} else {
+				cartList.textContent = "Your shopping cart is empty";
+			}
+		}
+		
+		displayShoppingCart();
+	</script>
+</body>
+</html>
+
+
+			
+
+
+
+
+
