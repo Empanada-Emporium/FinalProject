@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Shopping Cart</title>
+	<title>Shopping Cart Receipt</title>
 	<style>
 		body {
 			font-family: Arial, sans-serif;
@@ -15,33 +15,55 @@
 		}
 		li {
 			margin-bottom: 10px;
+			padding-bottom: 5px;
+			border-bottom: 1px dotted gray;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		h1 {
+			font-size: 32px;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+		#totalPrice {
+			font-weight: bold;
+			font-size: 24px;
+			margin-top: 20px;
 		}
 	</style>
 </head>
 <body>
-	<h1>Your Shopping Cart</h1>
-	<p>Here are the items in your shopping cart:</p>
-	<ul id="shoppingCartList"></ul>
+	<h1>Receipt</h1>
+  
+	<ul id="receiptList"></ul>
+
+	<p id="totalPrice"></p>
 	
 	<script>
-		let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
-		
-		function displayShoppingCart() {
-			let cartList = document.getElementById("shoppingCartList");
-			if (shoppingCart && shoppingCart.length > 0) {
-				for (let i = 0; i < shoppingCart.length; i++) {
-					let item = shoppingCart[i];
-					let listItem = document.createElement("li");
-					listItem.textContent = item;
-					cartList.appendChild(listItem);
-				}
-			} else {
-				cartList.textContent = "Your shopping cart is empty";
-			}
-		}
-		
-		displayShoppingCart();
+	  let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
+	
+	  let receiptList = document.getElementById('receiptList');
+	
+	  shoppingCart.forEach(item => {
+		let name = item.split(' - ')[0];
+		let price = item.split(' - ')[1];
+	
+		let li = document.createElement('li');
+		li.innerHTML = `${name}<span>$${price}</span>`;
+
+		li.getElementsByTagName('span')[0].textContent = price;
+	
+		receiptList.appendChild(li);
+	  });
 	</script>
+	<script>
+		let totalPrice = localStorage.getItem('totalPrice');
+		document.getElementById('totalPrice').textContent = `Total Price: $${totalPrice}`;
+		localStorage.removeItem('totalPrice');
+	</script>
+
 </body>
 </html>
 
