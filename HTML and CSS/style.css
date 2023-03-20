@@ -65,6 +65,43 @@ footer {
 	padding: 20px;
 	text-align: center;
 }
+.boxed-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .boxed-item {
+	border: 2px solid #555;
+	margin: 10px;
+	padding: 10px;
+	position: relative;
+	overflow: hidden;
+  }
+  
+  .boxed-text {
+	float: left;
+	width: 60%;
+	padding-right: 20px;
+	box-sizing: border-box;
+  }
+  
+  .boxed-image {
+	float: right;
+	width: 40%;
+  }
+  
+  .boxed-image img {
+	max-width: 100%;
+	max-height: 100%;
+  }
+  
+  .price {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	font-weight: bold;
+  }
 input[type=text], textarea {
 	width: 100%; /* Full width */
 	padding: 12px; /* Some padding */ 
