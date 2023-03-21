@@ -1,8 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Empanada Emporium</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="utf-8">
+		<title>Empanada Emporium</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name = "description" content ="This is the best Empanada in town">
+		<meta name = "keywords" content = "Sandwich, Empanada, Food">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+		<!-- CSS LINK -->
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+		<!-- SHOPPING CART ICON LINK -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<!-- 
 	<script>
 		let shoppingCart = [];
 
@@ -11,48 +25,163 @@
 			console.log(`Added ${item} to shopping cart.`);
 			console.log(shoppingCart);
 		}
-	</script>
+	</script> -->
 </head>
 <body>
+	<div class="wrapper">
 	<header>
-		<center><h1>Our Menu<img src="images/logo.png" alt="logo" /></h1></center>
-	</header>
-	<nav>
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="menu.html">Menu</a></li>
-			<li><a href="contact.html">Contact Us</a></li>
-		</ul>
-	</nav>
+		<center><h1>Empanada Emporium<img src="images/logo.png" alt="logo" /></h1></center>
+
+</header>
+
+		<!-- Menu -->
+
+
+		<div class="nav">
+			<ul>
+
+				
+				
+				
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="about.html">About</a></li> 
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="index.html">Home</a></li>
+
+			</ul>
+			<a href="cart.html">
+				<div class="cart">
+				<i class="bi bi-cart4"></i>
+				<div id = "cartAmount"  class="cartAmount" >0</div>
+			</div>
+			</a>
+			
+		</div>
+	
     <main>
 		<section>
 			<h2>Our Menu</h2>
-			<ul class="boxed-list">
-				<li class="boxed-item">Beef Empanada - $1.94
-				<img src="img_beef.png alt="Beef Empanada">
-				<dl>Filled with our delicious seasoned beef, in a sauce made with tomatos, onions, and garlic.</dl>
-				<button onclick="addItemToCart('Beef Empanada')">Add to Cart</button></li>
-				
-				<li class="boxed-item">Chicken Empanada - $1.94
-				<img src="img_chicken.png alt="Chicken Empanada">
-				<dl>Filled with mouth watering shredded chicken, in a sauce made with tomatos, onions, and garlic.</dl>
-				<button onclick="addItemToCart('Chicken Empanada')">Add to Cart</button></li>
-				
-				<li class="boxed-item">Pork Empanada - $2.36
-				<img src="img_pork.png alt="Pork Empanada">
-				<dl>Filled with our juicy pulled pork, in a sauce made with tomatos, onions, and garlic.</dl>
-				<button onclick="addItemToCart('Pork Empanada')">Add to Cart</button></li>
-							
-				<li class="boxed-item">Spinach and Cheese Empanada - $1.86
-				<img src="img_spinach_cheese.png alt="Spinach and Cheese Empanada">
-				<dl>Pastry filled with fresh spinach, and gooey Queso asadero.</dl>
-				<button onclick="addItemToCart('Spinach and Cheese Empanada')">Add to Cart</button></li>
-				
-				<li class="boxed-item">Vegetable Empanada - $1.65
-				<img src="img_vegetable.png alt="Vegetable Empanada">
-				<dl>Our vegetable medley! Filled with black beans, veggies, corn and our secret blend of spices.</dl>
-				<button onclick="addItemToCart('Vegetable Empanada')">Add to Cart</button></li>
-			</ul>
+			<div class="shop" id="shop">
+				<!-- <div class="item">
+					<img width="219" src="images/Beef.jpg" alt="">
+					<div class="details">
+						<h3>Beef Empanada</h3>
+						<p>Filled with our delicious seasoned beef, in a sauce made with tomatos, onions, and garlic.</p>
+						<div class="price-quantity">
+						<h2>$1.94</h2>
+							<div class="buttons">
+								<i class="bi bi-dash-lg"></i>
+								<div class="quantity">0</div>
+								<i class="bi bi-plus-lg"></i>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+				<!-- <div class="item">
+					<img width="219" src="images/Chicken.jpg" alt="Chicken Empanada">
+					<div class="details">
+						<h3>Chicken Empanada</h3>
+						<p>Filled with mouth watering shredded chicken, in a sauce made with tomatos, onions, and garlic.</p>
+						<div class="price-quantity">
+						<h2>$1.94</h2>
+							<div class="buttons">
+								<i class="bi bi-dash-lg"></i>
+								<div class="quantity">0</div>
+								<i class="bi bi-plus-lg"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<img width="219" src="images/Pork.jpg" alt="Pork Empanada">
+					<div class="details">
+						<h3>Pork Empanada</h3>
+						<p>Filled with our juicy pulled pork, in a sauce made with tomatos, onions, and garlic.</p>
+						<div class="price-quantity">
+						<h2>$2.36</h2>
+							<div class="buttons">
+								<i class="bi bi-dash-lg"></i>
+								<div class="quantity">0</div>
+								<i class="bi bi-plus-lg"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<img width="219" src="images/Spinach_and_cheese.jpg" alt="Spinach and Cheese Empanada">
+					<div class="details">
+						<h3>Spinach and Cheese Empanada</h3>
+						<p>Pastry filled with fresh spinach, and gooey Queso asadero.</p>
+						<div class="price-quantity">
+						<h2>$1.86</h2>
+							<div class="buttons">
+								<i class="bi bi-dash-lg"></i>
+								<div class="quantity">0</div>
+								<i class="bi bi-plus-lg"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img width="219" src="images/Vegetable.jpg" alt=" Vegetable Empanada">
+					<div class="details">
+						<h3>Vegetable Empanada</h3>
+						<p>Our vegetable medley! Filled with black beans, veggies, corn and our secret blend of spices.</p>
+						<div class="price-quantity">
+						<h2>$1.65</h2>
+							<div class="buttons">
+								<i class="bi bi-dash-lg"></i>
+								<div class="quantity">0</div>
+								<i class="bi bi-plus-lg"></i>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+			</div>
+
+		
 		</section>
 		<center><h4>Taxes included</h4></center>
-	</main>
+	</div>
+</main>
+
+
+
+
+
+
+
+
+	<!--FOOTER SECTION -->
+	<footer>
+		<div class="footer-content">
+	
+			<div class="footer-header">
+				<h3>EMPANADA <span>EMPORIUM</span></h3>
+			</div>
+	<!-- FOOTER SYM -->
+        <ul class="footer-sm">
+            <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+            <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+          </ul>
+        
+
+
+        <div class="footer-bottom">
+            <!-- add all information -->
+            <p>copyright &copy;2022  all rights reserved</p>
+        </div>
+    </div>
+
+</footer>
+<script src="Data.js"></script>
+<script src="main.js"></script>
+</body>
+
+</html>
