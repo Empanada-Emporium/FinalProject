@@ -212,3 +212,24 @@ input[type=text], textarea {
 	margin-bottom: 16px; /* Bottom margin */
 	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
+
+  @media (min-width: 600px){
+	h1{
+		font-size: 2em;
+		letter-spacing: .25em;
+	}
+	nav ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		padding-right: 2em;
+	}}
+
+@media (min-width: 1024px){
+	
+	nav ul{
+		padding-right: 10%;
+		padding-left: 10%;
+	}
+}
