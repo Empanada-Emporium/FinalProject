@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Empanada Emporium - Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+	<header>
+		<center><h1>Empanada Emporium<img src="images/logo.png" alt="logo" /></h1></center>
+
+</header>
+<nav>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="menu.html">Menu</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+		<li><a href="cart.html"><i class="bi bi-cart4"></i><div id="cartAmount" class="cartAmount">0</div></a></li>
+	</ul>
+</nav>
+
+    <center><h2>Checkout</h2></center>
+    <form id="checkout-form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="payment">Payment Method</label>
+            <select id="payment" name="payment" required>
+                <option value="credit">Credit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="card">Card Number</label>
+            <input type="text" id="card" name="card" required>
+        </div>
+        <div class="form-group">
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" name="expiry" required>
+        </div>
+        <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" required>
+        </div>
+        <button type="submit">Place Order</button>
+    </form>
+</body>
+<footer>
+    <div class="footer-content">
+
+        <div class="footer-header">
+            <h3>EMPANADA <span>EMPORIUM</span></h3>
+        </div>
+
+
+
+
+
+    <ul class="footer-sm">
+        <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+      </ul>
+    
+
+
+    <div class="footer-bottom">
+        <!-- add all information -->
+        <p>copyright &copy;2022  all rights reserved</p>
+    </div>
+</div>
+
+</footer>
+</body>
+</html>
