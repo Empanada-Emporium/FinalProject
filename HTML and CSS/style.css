@@ -91,7 +91,7 @@ section {
 }
 .description {
 	text-align: center;
-	font-size: 20px
+	font-size: 20px;
 }
 h1 {
 	
@@ -118,6 +118,7 @@ nav ul li:nth-child(4) {
 	border: 2px solid black;
 	padding: 10px;
 	margin-bottom: 20px;
+	background-color:#fdf5e6 ;
   }
   .price-quantity {
 	display: flex;
@@ -275,4 +276,8 @@ input[type=text], textarea {
   
   .footer-sm li a:hover {
 	color: #ff0000; 
+  }
+
+  img[alt="beef"]{
+	text-align: left;
   }
