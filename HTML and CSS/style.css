@@ -1,8 +1,24 @@
+
 body {
 	font-family: Arial, sans-serif;
-	background-color: #F5F5F5;
+	/* background-color: #F5F5F5; */
 	margin: 0;
 }
+
+  header{
+	background-color:black ;
+		
+  background-image:url(images/rest.jpg);
+	padding: 20px;
+	text-align: center;
+	color: white;
+	height: 30%;
+}
+
+
+
+
+
 
 form {
     max-width: 400px;
@@ -43,13 +59,11 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+/* .wrapper {
+    margin: 5px 50px 0px 50px !important;
+} */
 
-header {
-	background-color: #FFC107;
-	padding: 20px;
-	text-align: center;
-	color: white;
-}
+
 
 nav {
 	background-color: #333;
@@ -230,13 +244,6 @@ nav ul li:nth-child(4) {
 
 }
 
-footer {
-	background-color: #333;
-	color: white;
-	padding: 20px;
-	text-align: center;
-}
-  
   .price {
 	position: absolute;
 	bottom: 10px;
@@ -253,6 +260,96 @@ input[type=text], textarea {
 	margin-bottom: 16px; /* Bottom margin */
 	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
+
+  img[alt="beef"]{
+	text-align: left;
+  }
+
+
+/* FOOTER SECTION */
+footer{
+	position: relative;
+	  background-color:white;
+	  margin: 50px 0px 10px;
+	  height:auto;
+	  padding-top:20px;
+  }
+  .footer-content{
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  flex-direction: column;
+	  text-align: center;
+	  
+  }.footer-header{
+	  font-size: 2.0rem;
+	  font-weight: 300;
+	  margin-top: -20px;
+	  margin-bottom: 5px;
+	  color: black;
+	  text-shadow: 2px 2px 8px #111;
+	  
+  }
+  
+  
+  .footer-sm{
+  list-style: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  margin: 0px 0px 20px;
+  } 
+  
+  .footer-sm li{
+	  margin: 0 10px;
+  }
+  
+  .footer-sm a{
+	  text-decoration: none;
+	  color: black;
+	  padding: 5px;
+	  border-radius: 10%;
+	  
+  }
+  
+  
+  .footer-sm a i{
+	  font-size: 1.5rem;
+	  width: 20px;
+	  transition: color .4s ease;
+  }
+  .footer-sm a:hover i{
+	  color: red;
+	  
+  }
+  
+  .footer-bottom p{
+	  float: left;
+	  font-size: 14px;
+	  word-spacing: 2px;
+	  text-transform: capitalize;
+	  color:black;
+	  background-color:white;
+  }
+  
+  .footer-bottom a{
+	  
+	  color:black;
+	  font-size: 16px;
+	  opacity: .7;
+	  text-transform: none;
+	  margin-left:5px;
+  
+  }
+
+
+/* footer {
+	background-color: #333;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
   .footer-sm {
 	display: flex;
 	justify-content: center;
@@ -276,8 +373,71 @@ input[type=text], textarea {
   
   .footer-sm li a:hover {
 	color: #ff0000; 
-  }
+  } */
 
-  img[alt="beef"]{
-	text-align: left;
-  }
+/* *!Receipt */ 
+ .center{
+	position:absolute;
+	top: 40%;
+	left: 50%;
+	
+	transform: translate(-50%,-50%);
+ }
+.popup{
+	width: 350px;
+	height: 280px;
+	padding: 30px,30px;
+	background-color:white ;
+	border-radius: 10px ;
+	box-sizing:border-box ;
+	z-index: 2;
+	text-align: center;
+}
+.popup .icons{
+	margin: 5px 0px;
+	width:50px;
+	height:50px;
+	border: 2px solid #34f234;
+	text-align: center;
+	display: inline-block;
+	border-radius: 50%;
+	line-height:60px;
+}
+
+.popup .icons i.fa{
+	font-size: 30px;
+	color: #34f234;
+}
+
+.popup .title-head {
+	margin: 5px 0px;
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.popup.description{
+	color: #222;
+	font-size: 15px;
+	padding: 5px;
+}
+
+.popup .dismiss-btn{
+	margin-top: 15px ;
+}
+
+.popup .dismiss-btn button{
+	padding:10px 20px;
+	background-color: #111;
+	color: white;
+	border: 2px solid #111;
+	font-size: 16px;
+	font-weight: 600;
+	outline: none;
+	border-radius: 10px;
+	transition: all 300ms ease-in-out;
+
+}
+.popup .dismiss-btn button:hover{
+	color: black;
+	background: white;
+}

@@ -1,76 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Shopping Cart Receipt</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			padding: 20px;
-      text-align: center;
-		}
-		ul {
-			list-style-type: none;
-			margin: 0;
-			padding: 0;
-		}
-		li {
-			margin-bottom: 10px;
-			padding-bottom: 5px;
-			border-bottom: 1px dotted gray;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		h1 {
-			font-size: 32px;
-			margin-bottom: 20px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
-		}
-		#totalPrice {
-			font-weight: bold;
-			font-size: 24px;
-			margin-top: 20px;
-		}
-	</style>
+	<meta charset="utf-8">
+	<title>Empanada Emporium</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="This is the best Empanada in town">
+	<meta name="keywords" content="Sandwich, Empanada, Food">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- CSS LINK -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- SHOPPING CART ICON LINK -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
 </head>
+
 <body>
-	<h1>Receipt</h1>
-  
-	<ul id="receiptList"></ul>
 
-	<p id="totalPrice"></p>
-	
-	<script>
-	  let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
-	
-	  let receiptList = document.getElementById('receiptList');
-	
-	  shoppingCart.forEach(item => {
-		let name = item.split(' - ')[0];
-		let price = item.split(' - ')[1];
-	
-		let li = document.createElement('li');
-		li.innerHTML = `${name}<span>$${price}</span>`;
 
-		li.getElementsByTagName('span')[0].textContent = price;
-	
-		receiptList.appendChild(li);
-	  });
-	</script>
-	<script>
-		let totalPrice = localStorage.getItem('totalPrice');
-		document.getElementById('totalPrice').textContent = `Total Price: $${totalPrice}`;
-		localStorage.removeItem('totalPrice');
-	</script>
+	</header>
 
+	<nav>
+		<ul>
+
+			</a></li>
+		</ul>
+	</nav>
+	<!-- linking Cart icon to cart.html -->
+	<div id="cartAmount" class="cartAmount"></div>
+
+	<div id="label" class="text-center">
+
+	</div>
+
+	<div class="shopping-cart" id="shopping-cart">
+
+	</div>
+	
+
+
+
+	<!-- SCRIPT SECTION -->
+	<script src="Data.js"></script>
+	<script src="receipt.js"></script>
 </body>
+
 </html>
-
-
-			
-
-
-
-
-
